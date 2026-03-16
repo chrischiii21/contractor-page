@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 
 @theme {
     --color-midnight-navy: #0A1931;
@@ -6,4 +7,31 @@
     --color-steel-pewter: #99B0BB;
     --color-machinist-gray: #7E7E7E;
     --color-parchment-white: #F5F5F5;
+
+    --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family-display: 'Poppins', system-ui, -apple-system, sans-serif;
+
+    /* Font Size Scale */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 0.9375rem;
+    /* 15px */
+    --font-size-md: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 1.875rem;
+    /* 30px */
+    --font-size-4xl: 2.25rem;
+    /* 36px */
+    --font-size-5xl: 3rem;
+    /* 48px */
+    --font-size-6xl: 3.75rem;
+    /* 60px */
 }
