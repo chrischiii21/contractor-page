@@ -1,0 +1,591 @@
+---
+// Navbar component with dropdown menus
+import logo from "../assets/logo.png";
+---
+
+<nav
+    class="w-full bg-midnight-navy text-parchment-white fixed top-0 left-0 right-0 z-50"
+>
+    <!-- Top bar with contact info and social links -->
+    <div
+        id="top-bar"
+        class="bg-[#1a2d4a] border-b border-steel-pewter/20 hidden lg:block transition-all duration-300"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-10 text-sm">
+                <div class="flex items-center gap-6">
+                    <a
+                        href="tel:+9295535296"
+                        class="flex items-center gap-2 hover:text-helios-orange transition-colors"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                            ></path>
+                        </svg>
+                        <span>+929 553 5296</span>
+                    </a>
+                    <a
+                        href="mailto:contact@coolair.com"
+                        class="flex items-center gap-2 hover:text-helios-orange transition-colors"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                            ></path>
+                            <path
+                                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                            ></path>
+                        </svg>
+                        <span>contact@coolair.com</span>
+                    </a>
+                    <span class="flex items-center gap-2">
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Mon - Fri 08:00 - 18:00</span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a
+                        href="#"
+                        class="hover:text-helios-orange transition-colors"
+                        aria-label="Facebook"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="#"
+                        class="hover:text-helios-orange transition-colors"
+                        aria-label="Twitter"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="#"
+                        class="hover:text-helios-orange transition-colors"
+                        aria-label="YouTube"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="#"
+                        class="hover:text-helios-orange transition-colors"
+                        aria-label="Pinterest"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.92-.19-2.31 0-3.31l1.44-6.1s-.37-.74-.37-1.83c0-1.71 1-3 2.23-3 1.05 0 1.56.79 1.56 1.73 0 1.06-.67 2.63-1 4.09-.29 1.21.61 2.2 1.8 2.2 2.16 0 3.82-2.28 3.82-5.57 0-2.91-2.09-4.95-5.07-4.95-3.46 0-5.49 2.59-5.49 5.27 0 1.04.4 2.16.9 2.77a.36.36 0 0 1 .08.35c-.09.38-.3 1.21-.34 1.38-.05.22-.17.27-.4.16-1.51-.7-2.46-2.91-2.46-4.69 0-3.83 2.78-7.35 8.02-7.35 4.21 0 7.48 3 7.48 7.01 0 4.18-2.64 7.55-6.3 7.55-1.23 0-2.39-.64-2.79-1.39l-.76 2.9c-.27 1.06-1.01 2.39-1.5 3.2A12 12 0 1 0 12 0z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="#"
+                        class="hover:text-helios-orange transition-colors"
+                        aria-label="Instagram"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main navigation -->
+    <div class="bg-midnight-navy border-b border-steel-pewter/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img
+                            src={logo.src}
+                            alt="CoolAir Logo"
+                            class="h-12 w-auto"
+                        />
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a
+                        href="/reviews"
+                        class="text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                    >
+                        Reviews
+                    </a>
+                    <a
+                        href="/our-work"
+                        class="text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                    >
+                        Our Work
+                    </a>
+
+                    <!-- Trades We Serve Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                        >
+                            Trades We Serve
+                            <svg
+                                class="w-4 h-4 transition-transform group-hover:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                        >
+                            <div class="py-2">
+                                <a
+                                    href="/trades/plumbing"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors group/item"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M21 11h-3V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3H9V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7H0v2h3v7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3h3v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-7h3v-2zM8 19H5v-6h3v6zm0-8H5V5h3v6zm9 8h-3v-6h3v6zm0-8h-3V5h3v6z"
+                                        ></path>
+                                    </svg>
+                                    <span>Plumbing</span>
+                                </a>
+                                <a
+                                    href="/trades/hvac"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors group/item"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                                        ></path>
+                                        <path
+                                            d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                                        ></path>
+                                    </svg>
+                                    <span>HVAC</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a
+                        href="/what-we-do"
+                        class="text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                    >
+                        What We Do
+                    </a>
+
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                        >
+                            About
+                            <svg
+                                class="w-4 h-4 transition-transform group-hover:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                        >
+                            <div class="py-2">
+                                <a
+                                    href="/about"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                                        ></path>
+                                    </svg>
+                                    <span>About</span>
+                                </a>
+                                <a
+                                    href="/about/our-process"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                                        ></path>
+                                    </svg>
+                                    <span>Our Process</span>
+                                </a>
+                                <a
+                                    href="/about/careers"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                                        ></path>
+                                    </svg>
+                                    <span>Careers</span>
+                                </a>
+                                <a
+                                    href="/about/blog"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86l-3 3.87L9 13.14 6 17h12l-3.86-5.14z"
+                                        ></path>
+                                    </svg>
+                                    <span>Blog</span>
+                                </a>
+                                <a
+                                    href="/about/partners"
+                                    class="flex items-center gap-3 px-4 py-3 text-midnight-navy hover:bg-helios-orange hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        class="w-5 h-5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                                        ></path>
+                                    </svg>
+                                    <span>Partners</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a
+                        href="/contact"
+                        class="text-parchment-white hover:text-helios-orange transition-colors font-medium"
+                    >
+                        Contact
+                    </a>
+
+                    <!-- CTA Button -->
+                    <a
+                        href="/consultation"
+                        class="bg-helios-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d97a05] transition-colors shadow-lg"
+                    >
+                        Request a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button
+                    id="mobile-menu-button"
+                    class="lg:hidden text-parchment-white p-2"
+                    aria-label="Toggle menu"
+                >
+                    <svg
+                        id="menu-icon"
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg
+                        id="close-icon"
+                        class="w-6 h-6 hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-midnight-navy border-t border-steel-pewter/10"
+    >
+        <div class="px-4 py-4 space-y-3">
+            <a
+                href="/reviews"
+                class="block text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+            >
+                Reviews
+            </a>
+            <a
+                href="/our-work"
+                class="block text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+            >
+                Our Work
+            </a>
+
+            <!-- Mobile Trades We Serve Dropdown -->
+            <div>
+                <button
+                    id="mobile-trades-button"
+                    class="flex items-center justify-between w-full text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+                >
+                    <span>Trades We Serve</span>
+                    <svg
+                        class="w-4 h-4 transition-transform"
+                        id="mobile-trades-icon"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="mobile-trades-menu" class="hidden pl-4 space-y-2 mt-2">
+                    <a
+                        href="/trades/plumbing"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M21 11h-3V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3H9V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7H0v2h3v7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3h3v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-7h3v-2zM8 19H5v-6h3v6zm0-8H5V5h3v6zm9 8h-3v-6h3v6zm0-8h-3V5h3v6z"
+                            ></path>
+                        </svg>
+                        <span>Plumbing</span>
+                    </a>
+                    <a
+                        href="/trades/hvac"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                            ></path>
+                            <path
+                                d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                            ></path>
+                        </svg>
+                        <span>HVAC</span>
+                    </a>
+                </div>
+            </div>
+
+            <a
+                href="/what-we-do"
+                class="block text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+            >
+                What We Do
+            </a>
+
+            <!-- Mobile About Dropdown -->
+            <div>
+                <button
+                    id="mobile-about-button"
+                    class="flex items-center justify-between w-full text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+                >
+                    <span>About</span>
+                    <svg
+                        class="w-4 h-4 transition-transform"
+                        id="mobile-about-icon"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="mobile-about-menu" class="hidden pl-4 space-y-2 mt-2">
+                    <a
+                        href="/about"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                            ></path>
+                        </svg>
+                        <span>About</span>
+                    </a>
+                    <a
+                        href="/about/our-process"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                            ></path>
+                        </svg>
+                        <span>Our Process</span>
+                    </a>
+                    <a
+                        href="/about/careers"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                            ></path>
+                        </svg>
+                        <span>Careers</span>
+                    </a>
+                    <a
+                        href="/about/blog"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86l-3 3.87L9 13.14 6 17h12l-3.86-5.14z"
+                            ></path>
+                        </svg>
+                        <span>Blog</span>
+                    </a>
+                    <a
+                        href="/about/partners"
+                        class="flex items-center gap-3 text-steel-pewter hover:text-helios-orange transition-colors py-2"
+                    >
+                        <svg
+                            class="w-5 h-5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                            ></path>
+                        </svg>
+                        <span>Partners</span>
+                    </a>
+                </div>
+            </div>
+
+            <a
+                href="/contact"
+                class="block text-parchment-white hover:text-helios-orange transition-colors py-2 font-medium"
+            >
+                Contact
+            </a>
+
+            <!-- Mobile CTA Button -->
+            <a
+                href="/consultation"
+                class="block bg-helios-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d97a05] transition-colors text-center mt-4"
+            >
+                Request a Consultation
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script src="../scripts/navbar.ts"></script>
