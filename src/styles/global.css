@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    /* This is where you define your custom theme variables */
+    --color-brand: #0ea5e9;
+    --color-brand-dark: #0369a1;
+
+    --font-sans: "Inter", "ui-sans-serif", "system-ui";
+
+    /* Custom spacing example */
+    --spacing-128: 32rem;
+}
+
+/* Any custom base styles go here */
+body {
+    @apply bg-slate-50 text-slate-900;
+}
